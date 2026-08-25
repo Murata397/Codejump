@@ -13,7 +13,7 @@ html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
-  font-family: noto-sans-jp, ;
+  font-family: "Noto Serif JP", serif;
 }
 
 /* header */
@@ -96,6 +96,7 @@ header {
   justify-content: center;
   margin: 180px 150px;
   padding: 0 15px;
+  align-items: center;
 }
 
 /* title */
@@ -108,5 +109,14 @@ header {
 .section-title-en {
   writing-mode: sideways-rl;
   font-size: 16px;
-  margin-left: 20px;
+  margin-left: 10px;
+  font-weight: normal;
+}
+
+.section-title-jp {
+  writing-mode: vertical-rl;
+  font-size: 36px;
+  font-weight: normal;
+  margin-left: 50px;
+  letter-spacing: 5px;
 }
