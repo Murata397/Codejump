@@ -27,7 +27,7 @@ header {
   width: 100%;
   background-color: #000;
   justify-content: center;
-  
+  position: relative;
 }
 
 /* header-logo */
@@ -135,7 +135,7 @@ header {
 }
 
 .news-container {
-  margin: 80px;
+  margin: 60px 0;
   padding: 20px;
   writing-mode: vertical-rl;
 }
@@ -168,8 +168,9 @@ header {
 .section-products1 {
   display: flex;
   flex-direction: row-reverse;
+  width: 100%;
   max-width: 1920px;
-  margin: 0 auto;
+  margin: 0 auto 180px auto;
   padding: 0 20px;
   justify-content: center;
 }
@@ -189,22 +190,83 @@ header {
 
 .products1-container {
   margin-top: 100px;
-  position: relative;
   width: 65%;
 }
 
 .products1-container > img {
   max-width: 100%;
   vertical-align: bottom;
+  position: relative;
 }
 
 .products1-text {
-  position: absolute;
+  /*position: absolute;*/
   bottom: 20px;
   left: 20px;
   background: rgba(249, 233, 6, 0.6);
   padding: 50px 0;
   text-align: center;
+  color: #fff;
 }
 
 /* products2 */
+
+.section-products2 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto 180px auto;
+  padding: 0 20px;
+  justify-content: flex-start;
+}
+
+.section-products2 > h2 {
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+}
+
+.section-products2 span {
+  margin: 15px 20px;
+}
+
+.section-products2 span:first-of-type {
+  margin-right: 25px;
+}
+
+.products2-container {
+  margin-top: 100px;
+  width: 65%;
+}
+
+.products2-container > img {
+  max-width: 100%;
+  vertical-align: bottom;
+  position: relative;
+}
+
+.products2-text {
+  /*position: absolute;*/
+  bottom: 20px;
+  right: 20px;
+  color: #fff;
+  background: rgba(149, 42, 38, 0.6);
+  padding: 50px;
+  text-align: center;
+}
+
+/* map */
+
+.map {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.map > iframe {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+/* footer */
