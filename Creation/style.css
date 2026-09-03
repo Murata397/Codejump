@@ -162,29 +162,33 @@ header {
 
 /* product1 */
 
-.section-products1 {
+.section-products {
   display: flex;
   flex-direction: row-reverse;
   width: 100%;
   max-width: 1400px;
-  margin-bottom: 180px;
+  margin: 0 auto 180px auto;
   padding-bottom: 20px;
 }
 
-.section-products1 > h2 {
+.section-products:nth-last-of-type(odd) {
+  flex-direction: row;
+}
+
+.section-products > h2 {
   flex-direction: column-reverse;
   justify-content: flex-end;
 }
 
-.section-products1 span {
+.section-products span {
   margin: 15px 20px;
 }
 
-.section-products1 span:first-of-type {
+.section-products span:first-of-type {
   margin-right: 25px;
 }
 
-.products1-container {
+.section-products .products-container {
   display: flex;
   flex-direction: row-reverse;
   margin-top: 150px;
@@ -193,18 +197,17 @@ header {
 
 }
 
-.products1-container > img {
+.section-products .products-container > img {
   max-width: 100%;
   width: 640px;
   height: 430px;
-  margin-left: 100px;
   vertical-align: bottom;
 }
 
-.products1-text {
+.section-products .products-text {
   position: absolute;
   bottom: -20px;
-  left: 60px;
+  left: -20px;
   width: 400px;
   background: rgba(249, 233, 6, 0.6);
   padding: 50px;
@@ -213,56 +216,10 @@ header {
   font-size: 16px;
 }
 
-/* products2 */
-
-.section-products2 {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  max-width: 1400px;
-  margin: 0 auto 180px auto;
-  padding-bottom: 20px;
-}
-
-.section-products2 > h2 {
-  flex-direction: column-reverse;
-  justify-content: flex-end;
-}
-
-.section-products2 span {
-  margin: 15px 20px;
-}
-
-.section-products2 span:first-of-type {
-  margin-right: 25px;
-}
-
-.products2-container {
-  display: flex;
-  flex-direction: row;
-  margin-top: 150px;
-  position: relative;
-  justify-content: flex-end;
-}
-
-.products2-container > img {
-  max-width: 100%;
-  width: 640px;
-  height: 430px;
-  margin-right: 100px;
-  vertical-align: bottom;
-}
-
-.products2-text {
-  position: absolute;
-  bottom: -20px;
-  right: 60px;
-  width: 400px;
-  color: #fff;
+.section-products:nth-last-of-type(odd) .products-text {
+  right: -20px;
+  left: auto;
   background: rgba(149, 42, 38, 0.6);
-  padding: 50px;
-  text-align: center;
-  font-size: 16px;
 }
 
 /* map */
