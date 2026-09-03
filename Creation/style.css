@@ -33,17 +33,14 @@ header {
 /* header-logo */
 
 .header-logo {
-  flex-basis: 117px;
   position: absolute;
   top: 60px;
   right: 80px;
-  
 }
 
 .header-logo > img {
   line-height: 1px;
-  margin-left: 60px;
-  width: 40%;
+  width: 100%;
 }
 
 /* header-nav */
@@ -72,7 +69,7 @@ header {
   object-fit: cover;
   object-position: center top;
   width: 100%;
-  max-width: 1920px;
+  max-width: 1400px;
   height: 100vh;
   padding: 0;
   flex: 1;
@@ -169,10 +166,9 @@ header {
   display: flex;
   flex-direction: row-reverse;
   width: 100%;
-  max-width: 1920px;
+  max-width: 1400px;
   margin-bottom: 180px;
-  padding: 0 0 20px 400px;
-  justify-content: center;
+  padding-bottom: 20px;
 }
 
 .section-products1 > h2 {
@@ -223,10 +219,9 @@ header {
   display: flex;
   flex-direction: row;
   width: 100%;
-  max-width: 1920px;
+  max-width: 1400px;
   margin: 0 auto 180px auto;
-  padding: 0 400px 20px 0;
-  justify-content: center;
+  padding-bottom: 20px;
 }
 
 .section-products2 > h2 {
@@ -379,6 +374,11 @@ footer {
   .header-logo  {
     top: 20px;
     right: 20px;
+    width: 40px;
+  }
+
+  .header-logo > img {
+    max-width: 100%;
   }
 
   .header-nav-list {
@@ -528,7 +528,11 @@ footer {
   .footer-logo {
     top: 30px;
     right: 30px;
-    width: 25%
+    width: 40px;
+  }
+
+  .footer-logo > img {
+    max-width: 100%;
   }
 
   .address {
