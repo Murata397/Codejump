@@ -160,7 +160,7 @@ header {
   flex-direction: column;
 }
 
-/* product1 */
+/* product */
 .section-products {
   display: flex;
   flex-direction: row-reverse;
