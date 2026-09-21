@@ -13,5 +13,10 @@ html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
-  font-family: "Noto Serif JP", serif;
+  font-family: "Hiragino Kaku Gothic ProN";
+}
+body{
+  color: #333;
+  min-height: 100vh;
+  position: relative;
 }

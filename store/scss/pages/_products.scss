@@ -1,0 +1,17 @@
+.page-link-container {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin-top: 40px;
+  gap: 40px;
+
+  a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}

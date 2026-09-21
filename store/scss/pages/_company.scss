@@ -1,0 +1,36 @@
+.section-company {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 90px 40px 160px 40px;
+
+  .company-table {
+    
+
+    th {
+      border-bottom: solid #DCDBDB 1px;
+      font-weight: normal;
+      text-align: left;
+      padding: 20px 50px 20px 10px;
+      font-size: 14px;
+    }
+
+    td {
+      border-bottom: solid #DCDBDB 1px;
+      font-weight: normal;
+      text-align: left;
+      padding: 20px 100px 20px 50px;
+      font-size: 14px;
+    }
+
+    tr:last-of-type {
+      th {
+        border-bottom: none;
+      }
+
+      td {
+        border-bottom: none;
+      }
+    }
+  }
+}

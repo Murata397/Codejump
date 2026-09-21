@@ -14,22 +14,13 @@ html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
-  font-family: "Noto Serif JP", serif;
+  font-family: "Hiragino Kaku Gothic ProN";
 }
 
-.footer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 40px;
-}
-.footer .footer-sns-list {
-  display: flex;
-  width: 20%;
-  justify-content: space-around;
+body {
+  color: #333;
+  min-height: 100vh;
+  position: relative;
 }
 
 /*PC時の画面*/
@@ -95,7 +86,7 @@ html {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 80px 0px 160px 0px;
+  padding: 80px 0px 130px 0px;
 }
 .section-products .section-products-list {
   display: grid;
@@ -122,5 +113,99 @@ html {
   margin-top: 40px;
   text-decoration: none;
   color: #333;
+  font-size: 14px;
+}
+
+.page-title {
+  font-size: 14px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  font-weight: normal;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1360px;
+  height: 20px;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+}
+.footer .footer-sns-list {
+  display: flex;
+  width: 25%;
+  justify-content: space-around;
+  list-style: none;
+}
+.footer .footer-sns-list a {
+  text-decoration: none;
+  color: #333;
+  font-size: 12px;
+}
+.footer .copyright {
+  font-size: 10px;
+}
+
+.section-about {
+  width: 100%;
+  max-width: 1360px;
+  padding: 90px 40px 160px 40px;
+  margin: 0 auto;
+}
+.section-about .about-text {
+  max-width: 600px;
+}
+.section-about .about-text p {
+  margin-top: 30px;
+  line-height: 2;
+}
+
+.section-company {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 90px 40px 160px 40px;
+}
+.section-company .company-table th {
+  border-bottom: solid #DCDBDB 1px;
+  font-weight: normal;
+  text-align: left;
+  padding: 20px 50px 20px 10px;
+  font-size: 14px;
+}
+.section-company .company-table td {
+  border-bottom: solid #DCDBDB 1px;
+  font-weight: normal;
+  text-align: left;
+  padding: 20px 100px 20px 50px;
+  font-size: 14px;
+}
+.section-company .company-table tr:last-of-type th {
+  border-bottom: none;
+}
+.section-company .company-table tr:last-of-type td {
+  border-bottom: none;
+}
+
+.page-link-container {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin-top: 40px;
+  gap: 40px;
+}
+.page-link-container a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+.page-link-container p {
   font-size: 14px;
 }/*# sourceMappingURL=style.css.map */
