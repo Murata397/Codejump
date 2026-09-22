@@ -12,7 +12,7 @@
 
   <body>
     <!--header-->
-    <header id="header" class="header">
+    <header id="header" class="container">
       <!--logo-->
       <h1 class="site-title">
         <a href="index.html">
@@ -47,23 +47,25 @@
     <!--main-->
     <main>
       <article>
-        <section id="products-item" class="section-product-item">
+        <section id="products-item" class="container">
           <h1 class="page-title">プロダクトタイトル</h2>
-          <div class="products-item-containe">
+          <div class="products-item-container">
             <img class="products-item" src="img/item11.jpg" alt="">
-            <p class="products-text">テキストテキストテキストテキストテキストテキストテキストテキストテキスト 
-              テキストテキストテキストテキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-            <p class="products-text">テキストテキストテキストテキストテキストテキストテキストテキストテキスト 
-              テキストテキストテキストテキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-            <p class="products-price">¥99,999+tax</p>
-            <dl>
-              <dt>SIZE:</dt>
-              <dd>W999 x D999 x H999</dd>
-              <dt>COLOR:</dt>
-              <dd>テキスト</dd>
-              <dt>MATERIAL:</dt>
-              <dd>テキスト</dd>
-            </dl>
+            <div class="products-item-wrapper">
+              <p class="products-text">テキストテキストテキストテキストテキストテキストテキストテキストテキスト 
+                テキストテキストテキストテキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+              <p class="products-text">テキストテキストテキストテキストテキストテキストテキストテキストテキスト 
+                テキストテキストテキストテキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+              <p class="products-price">¥99,999+tax</p>
+              <dl class="products-item-date">
+                <dt>SIZE:</dt>
+                <dd>W999 x D999 x H999</dd>
+                <dt>COLOR:</dt>
+                <dd>テキスト</dd>
+                <dt>MATERIAL:</dt>
+                <dd>テキスト</dd>
+              </dl>
+            </div>
           </div>
           <a href="products.html">Back To Products</a>
         </section>
@@ -71,7 +73,7 @@
     </main>
 
     <!--footer-->
-    <footer class="footer">
+    <footer id="footer" class="container">
       <!--sns-->
       <ul class="footer-sns-list">
         <li class="footer-sns-item">
