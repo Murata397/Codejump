@@ -11,7 +11,7 @@
       list-style: none;
 
       img {
-        width: 294px;
+        max-width: 100%;
         margin-bottom: 10px;
       }
 
@@ -86,5 +86,16 @@
     display: block;
     text-align: center;
     margin-top: 70px;
+  }
+}
+
+@media screen and (max-width: 767px){
+  #products {
+    padding: 80px 40px 120px 40px;
+  
+    .section-products-list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px 20px;
+    }
   }
 }

@@ -2,7 +2,8 @@
 *,
 ::before,
 ::after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border-style: solid;
   border-width: 0;
   min-width: 0;
@@ -36,9 +37,15 @@ a {
 
 /*PC時の画面*/
 #header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   height: 80px;
   background-color: #fff;
   position: fixed;
@@ -104,10 +111,18 @@ a {
 }
 
 #footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   height: 20px;
   position: absolute;
   bottom: 20px;
@@ -115,9 +130,12 @@ a {
   right: 0;
 }
 #footer .footer-sns-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 25%;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   list-style: none;
 }
 #footer .footer-sns-list a {
@@ -127,6 +145,17 @@ a {
   font-size: 10px;
 }
 
+@media screen and (max-width: 767px) {
+  #footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #footer .footer-sns-list {
+    width: auto;
+  }
+}
 #company {
   padding: 90px 40px 160px 40px;
 }
@@ -174,7 +203,7 @@ a {
   list-style: none;
 }
 #products .section-products-list .section-products-item img {
-  width: 294px;
+  max-width: 100%;
   margin-bottom: 10px;
 }
 #products .section-products-list .section-products-item p {
@@ -190,9 +219,14 @@ a {
 }
 
 .page-link-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-self: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
   margin-top: 40px;
   gap: 40px;
 }
@@ -201,8 +235,12 @@ a {
   padding-top: 80px;
 }
 #products-item .products-item-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   max-width: 800px;
   gap: 50px;
   margin-bottom: 60px;
@@ -212,9 +250,15 @@ a {
   height: auto;
 }
 #products-item .products-item-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   width: 43%;
 }
 #products-item .products-item-wrapper p {
@@ -222,8 +266,11 @@ a {
   line-height: 1.5;
 }
 #products-item .products-item-wrapper .products-item-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 #products-item .products-item-wrapper .products-item-date dt {
   font-size: 14px;
@@ -237,4 +284,14 @@ a {
   display: block;
   text-align: center;
   margin-top: 70px;
-}/*# sourceMappingURL=style.css.map */
+}
+
+@media screen and (max-width: 767px) {
+  #products {
+    padding: 80px 40px 120px 40px;
+  }
+  #products .section-products-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 20px;
+  }
+}
