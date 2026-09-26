@@ -1,4 +1,4 @@
-.section-company {
+#company {
   padding: 90px 40px 160px 40px;
 
   .company-table {
@@ -33,5 +33,28 @@
 }
 
 @media screen and (max-width: 767px){
-  
+  #company {
+    .company-table {
+      th  {
+        padding: 20px 10px 5px 10px;
+        border-bottom: none;
+      }
+
+      td {
+        padding: 5px 10px 20px 10px;
+      }
+
+      th, td {
+        display: block;
+        width: 100%;
+        text-align: left;
+      }
+    }
+
+    .company-map {
+      iframe {
+        width: auto;
+      }
+    }
+  }
 }

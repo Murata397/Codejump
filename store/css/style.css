@@ -37,6 +37,7 @@ a {
 
 /*PC時の画面*/
 #header {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -62,19 +63,34 @@ a {
   max-width: 100%;
 }
 #header .header-nav-list {
-  list-style: none;
-  display: none;
+  position: fixed;
+  top: 0px;
+  left: -300px;
+  width: 300px;
+  color: #fff;
+  z-index: 20;
+  opacity: 0;
+  padding: 36px 50px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 #header .header-nav-list .header-nav-item {
   margin-bottom: 14px;
+  list-style: none;
 }
 #header .header-nav-list .header-nav-item a {
   color: #fff;
+}
+#header .open .header-nav-list {
+  left: 0px;
+  opacity: 1;
 }
 #header .toggle-btn {
   width: 30px;
   height: 30px;
   position: relative;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   cursor: pointer;
   z-index: 20;
 }
@@ -85,6 +101,8 @@ a {
   height: 2px;
   background-color: #333;
   border-radius: 4px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 #header .toggle-btn span:nth-child(1) {
   top: 10px;
@@ -92,8 +110,29 @@ a {
 #header .toggle-btn span:nth-child(2) {
   bottom: 10px;
 }
+#header .toggle-btn .open .toggle_btn span {
+  background-color: #fff;
+}
+#header .toggle-btn .open .toggle_btn span:nth-child(2) {
+  -webkit-transform: translateY(-4px) rotate(45deg);
+  transform: translateY(-4px) rotate(45deg);
+}
 #header .mask {
   display: none;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+#header .open .mask {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.8;
+  z-index: 10;
+  cursor: pointer;
 }
 
 .container {
@@ -151,46 +190,76 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    bottom: 30px;
   }
   #footer .footer-sns-list {
-    width: auto;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 80%;
+    padding-right: 20px;
+  }
+  #footer p {
+    padding-top: 5px;
   }
 }
-#company {
+#about {
   padding: 90px 40px 160px 40px;
 }
-#company .about-text {
+#about .about-text {
   max-width: 600px;
 }
-#company .about-text p {
+#about .about-text p {
   margin-top: 30px;
   line-height: 2;
 }
 
-.section-company {
+#company {
   padding: 90px 40px 160px 40px;
 }
-.section-company .company-table th {
+#company .company-table th {
   border-bottom: solid #DCDBDB 1px;
   font-weight: normal;
   text-align: left;
   padding: 20px 50px 20px 10px;
   font-size: 14px;
 }
-.section-company .company-table td {
+#company .company-table td {
   border-bottom: solid #DCDBDB 1px;
   font-weight: normal;
   text-align: left;
   padding: 20px 100px 20px 50px;
   font-size: 14px;
 }
-.section-company .company-table tr:last-of-type th {
+#company .company-table tr:last-of-type th {
   border-bottom: none;
 }
-.section-company .company-table tr:last-of-type td {
+#company .company-table tr:last-of-type td {
   border-bottom: none;
 }
 
+@media screen and (max-width: 767px) {
+  #company .company-table th {
+    padding: 20px 10px 5px 10px;
+    border-bottom: none;
+  }
+  #company .company-table td {
+    padding: 5px 10px 20px 10px;
+  }
+  #company .company-table th, #company .company-table td {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+  #company .company-map iframe {
+    width: auto;
+  }
+}
 #products {
   padding: 80px 0px 130px 0px;
 }
@@ -293,5 +362,34 @@ a {
   #products .section-products-list {
     grid-template-columns: repeat(2, 1fr);
     gap: 40px 20px;
+  }
+  #products-item {
+    padding-bottom: 160px;
+  }
+  #products-item .products-item-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    max-width: 767px;
+    gap: 30px;
+  }
+  #products-item .products-item-container img {
+    width: auto;
+  }
+  #products-item .products-item-container .products-item-wrapper {
+    width: auto;
+  }
+  #products-item .products-item-container .products-item-wrapper p {
+    margin-bottom: 30px;
+  }
+  #products-item .products-item-container .products-item-wrapper dt {
+    margin-bottom: 5px;
+  }
+  #products-item .products-item-container .products-item-wrapper dd {
+    margin-bottom: 5px;
   }
 }

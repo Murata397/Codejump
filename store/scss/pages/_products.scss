@@ -98,4 +98,36 @@
       gap: 40px 20px;
     }
   }
+
+  #products-item {
+    padding-bottom: 160px;
+
+    .products-item-container {
+      flex-direction: column;
+      justify-content: center;
+      max-width: 767px;
+      gap: 30px;
+
+
+      img {
+        width: auto;
+      }
+
+      .products-item-wrapper {
+        width: auto;
+
+        p {
+          margin-bottom: 30px;
+        }
+
+        dt {
+          margin-bottom: 5px;
+        }
+
+        dd {
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
 }

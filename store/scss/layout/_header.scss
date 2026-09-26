@@ -1,5 +1,6 @@
 /*PC時の画面*/
-#header {
+#header { 
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -23,22 +24,36 @@
   }
 
   .header-nav-list {
-    list-style: none;
-    display: none;
+    position: fixed;
+    top: 0px;
+    left: -300px;
+    width: 300px;
+    color: #fff;
+    z-index: 20;
+    opacity: 0;
+    padding: 36px 50px;
+    transition: 0.5s;
     
     .header-nav-item {
       margin-bottom: 14px;
-      
+      list-style: none;
+
       a {
         color: #fff;
       }
     }
   }
 
+  .open .header-nav-list {
+    left: 0px;
+    opacity: 1;
+  }
+
   .toggle-btn {
     width: 30px;
     height: 30px;
     position: relative;
+    transition: all 0.5s;
     cursor: pointer;
     z-index: 20;
 
@@ -49,6 +64,7 @@
       height: 2px;
       background-color: #333;
       border-radius: 4px;
+      transition: all 0.5s;
     }
 
     span:nth-child(1) {
@@ -58,13 +74,32 @@
     span:nth-child(2) {
       bottom: 10px;
     }
+
+    .open .toggle_btn span {
+      background-color: #fff;
+    }
+
+    .open .toggle_btn span:nth-child(2) {
+      -webkit-transform: translateY(-4px) rotate(45deg);
+      transform: translateY(-4px) rotate(45deg);
+    }
   }
 
   .mask {
     display: none;
+    transition: all 0.5s;
   }
-}
 
-@media screen and (max-width: 767px){
-  
+  .open .mask {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .8;
+    z-index: 10;
+    cursor: pointer;
+  }
 }
