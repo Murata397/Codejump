@@ -75,13 +75,20 @@
       bottom: 10px;
     }
 
-    .open .toggle_btn span {
-      background-color: #fff;
-    }
+    .open{
+      span {
+        background-color: #fff;
+      }
 
-    .open .toggle_btn span:nth-child(2) {
-      -webkit-transform: translateY(-4px) rotate(45deg);
-      transform: translateY(-4px) rotate(45deg);
+      span:nth-child(1) {
+        -webkit-transform: translateY(4px) rotate(-45deg);
+        transform: translateY(4px) rotate(-45deg);
+      }
+
+      span:nth-child(2) {
+        -webkit-transform: translateY(-4px) rotate(45deg);
+        transform: translateY(-4px) rotate(45deg);
+      }
     }
   }
 
@@ -90,7 +97,7 @@
     transition: all 0.5s;
   }
 
-  .open .mask {
+  .mask.open {
     display: block;
     position: fixed;
     top: 0;
